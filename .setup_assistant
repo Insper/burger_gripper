@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mybot_description
+    relative_path: urdf/insper.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/mybot.srdf
+  CONFIG:
+    author_name: Lícia Sales
+    author_email: liciascl@insper.edu.br
+    generated_timestamp: 1598563473

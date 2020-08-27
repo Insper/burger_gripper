@@ -1,0 +1,9 @@
+controller_list:
+  - name: fake_gripper_controller
+    joints:
+      - gripper_extension
+      - left_gripper_joint
+      - right_gripper_joint
+initial:  # Define initial robot poses.
+  - group: gripper
+    pose: open_gripper
