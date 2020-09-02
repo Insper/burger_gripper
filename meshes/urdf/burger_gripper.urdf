@@ -408,7 +408,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
         <joint name="gripper_extension">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <hardwareInterface>hardwareInterface/PositionJointInterface</hardwareInterface>
         </joint>
     </transmission>
     <joint name="left_gripper_joint" type="revolute">
@@ -444,7 +444,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
         <joint name="left_gripper_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <hardwareInterface>hardwareInterface/PositionJointInterface</hardwareInterface>
         </joint>
     </transmission>
     <joint name="right_gripper_joint" type="revolute">
@@ -480,7 +480,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
         <joint name="right_gripper_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <hardwareInterface>hardwareInterface/PositionJointInterface</hardwareInterface>
         </joint>
     </transmission>
     <gazebo>
@@ -543,143 +543,6 @@
             <robotNamespace>/</robotNamespace>
         </plugin>
     </gazebo>
-</robot>
 
-<transmission name="gripper_extension_trans" type="SimpleTransmission">
-        <type>transmission_interface/SimpleTransmission</type>
-        <actuator name="gripper_extension_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-        <joint name="gripper_extension">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-    </transmission>
-    <joint name="left_gripper_joint" type="revolute">
-        <axis xyz="0 0 1" />
-        <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5" />
-        <origin rpy="0 0 0 " xyz="0 0 0" />
-        <parent link="gripper_pole" />
-        <child link="left_gripper" />
-    </joint>
-    <link name="left_gripper">
-        <visual>
-            <origin rpy="0 0 0" xyz="0 0 0" />
-            <geometry>
-                <mesh filename="package://burger_gripper/meshes/sensors/esquerda.dae" />
-            </geometry>
-        </visual>
-        <collision>
-            <geometry>
-                <mesh filename="package://burger_gripper/meshes/sensors/esquerda.dae" />
-            </geometry>
-            <origin rpy="0 0 0 " xyz="0 0 0" />
-        </collision>
-        <inertial>
-            <mass value="0.000625" />
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-        </inertial>
-    </link>
-    <transmission name="left_gripper_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <actuator name="left_gripper_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-        <joint name="left_gripper_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-    </transmission>
-    <joint name="right_gripper_joint" type="revolute">
-        <axis xyz="0 0 -1" />
-        <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5" />
-        <origin rpy="0 0 0 " xyz="0 0 0" />
-        <parent link="gripper_pole" />
-        <child link="right_gripper" />
-    </joint>
-    <link name="right_gripper">
-        <visual>
-            <origin rpy="0 0 0 " xyz="0 0 0" />
-            <geometry>
-                <mesh filename="package://burger_gripper/meshes/sensors/direita.dae" />
-            </geometry>
-        </visual>
-        <collision>
-            <geometry>
-                <mesh filename="package://burger_gripper/meshes/sensors/direita.dae" />
-            </geometry>
-            <origin rpy="0 0 0 " xyz="0 0 0" />
-        </collision>
-        <inertial>
-            <mass value="0.000625" />
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-        </inertial>
-    </link>
-    <transmission name="right_gripper_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <actuator name="right_gripper_motor">
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-        <joint name="right_gripper_joint">
-            <hardwareInterface>PositionJointInterface</hardwareInterface>
-        </joint>
-    </transmission>
-    <gazebo>
-        <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-            <robotNamespace>/</robotNamespace>
-        </plugin>
-    </gazebo>
-    <transmission name="trans_wheel_left_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="wheel_left_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="wheel_left_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_wheel_right_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="wheel_right_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="wheel_right_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_gripper_extension">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="gripper_extension">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="gripper_extension_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_left_gripper_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="left_gripper_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="left_gripper_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="trans_right_gripper_joint">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="right_gripper_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="right_gripper_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/</robotNamespace>
-        </plugin>
-    </gazebo>
+
 </robot>
