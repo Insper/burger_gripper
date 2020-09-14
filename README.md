@@ -53,6 +53,8 @@ Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> visualize as
 
     rqt_image_view
 
+
+ ![rodando_burger](img/rodando_burger.gif)
    
 Em um outro terminal <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> suba o teleop para navegar com Burger pelo cenário;
 
