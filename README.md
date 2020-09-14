@@ -46,6 +46,8 @@ Não se esqueça de apertar o PLAY no Gazebo para iniciar a simulação;
 Em um outro terminal Crtl+Shift+t visualize os topicos diponiveis:
 
     rostopic list
+
+ ![rostopic_list](img/rostopic_list.png)   
     
 Em um outro terminal Crtl+Shift+t visualize as imagens da câmera no Burger:
 
