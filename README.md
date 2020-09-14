@@ -1,5 +1,5 @@
 # Upgrades no TurtleBot3 Burger 
-
+ ![rostopic_list](img/burger.png)   
 ### Implementaçãções Testadas
 
  -   Camera
@@ -34,7 +34,7 @@ Execute o comando catkin_make na pasta raiz catkin_ws
 ### Agora vamos rodar os launchs necessários
 
 
-Abra um novo terminal Crtl+Alt+t e suba o Burger no gazebo:
+Abra um novo terminal <kbd>Crtl</kbd>+<kbd>Alt</kbd>+<kbd>t</kbd> e suba o Burger no gazebo:
 
     roslaunch burger_gripper burger_gripper_gazebo.launch  
     
@@ -43,18 +43,18 @@ Não se esqueça de apertar o PLAY no Gazebo para iniciar a simulação;
 
 ![aperte o play](img/play_burger.png) 
 
-Em um outro terminal Crtl+Shift+t visualize os topicos diponiveis:
+Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> visualize os topicos diponiveis:
 
     rostopic list
 
  ![rostopic_list](img/rostopic_list.png)   
     
-Em um outro terminal Crtl+Shift+t visualize as imagens da câmera no Burger:
+Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> visualize as imagens da câmera no Burger:
 
     rqt_image_view
 
 
-Em um outro terminal Crtl+Shift+t abra a interface de controle;
+Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> abra a interface de controle;
 
     roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
