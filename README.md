@@ -53,12 +53,11 @@ Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> visualize as
 
     rqt_image_view
 
+   
+Em um outro terminal <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> suba o teleop para navegar com Burger pelo cenário;
 
-Em um outro terminal  <kbd>Crtl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> abra a interface de controle;
 
     roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
-
-  ![rodando os comandos](img/rodando_burger.gif)  
   
  ## O resultado deve ser parecido com isso 
   
