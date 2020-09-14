@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="burger_gripper_gui" type="burger_gripper_gui" name="burger_gripper_gui" output="screen"/>
+</launch>
