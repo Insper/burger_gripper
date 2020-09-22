@@ -1,6 +1,6 @@
 # Upgrades no TurtleBot3 Burger 
  ![rostopic_list](img/burger.png)   
-### Implementaçãções Testadas
+### Implementações Testadas
 
  -   Camera
  -   IMU
